@@ -28,7 +28,10 @@ on:
         options:
           - ubuntu-20.04
           - ubuntu-22.04
-
+#自动清理：每天早上6点
+  schedule:
+    - cron: 0 22 * * *
+          
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
